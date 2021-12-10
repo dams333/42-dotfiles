@@ -33,6 +33,6 @@ function cd()
         builtin cd $@ && ls
 }
 
-alias fsave="cd /mnt/nfs/homes/dhubleur/Documents && ./save.sh"
+#alias fsave="cd /mnt/nfs/homes/dhubleur/Documents && ./save.sh"
 
 ! pgrep RP42 > /dev/null && (nohup ~/Documents/RP42 2>&1 > /dev/null &) 2>&1 > /dev/null
