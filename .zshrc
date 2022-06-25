@@ -6,11 +6,10 @@ source $ZSH/oh-my-zsh.sh
 
 DISABLE_UPDATE_PROMPT="true"
 
-plugins=(git)
-
 alias zshconf="vim ~/.zshrc"
 alias vimconf="vim ~/.vimrc"
 alias norm="norminette -R CheckForbiddenSourceHeader"
+alias gcc42="gcc -Wall -Wextra -Werror"
 alias normh="norminette -R CheckDefine"
 alias gc42="gcc -Wall -Wextra -Werror"
 
@@ -24,7 +23,7 @@ function gitcp()
 {
         git commit -m "$@" && git push origin master
 }
-alias gitcl="git clone"
+alias gcl="git clone"
 
 alias val="valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all --show-reachable=yes"
 
@@ -34,5 +33,9 @@ function cd()
 }
 
 alias vogpush="cd /mnt/nfs/homes/dhubleur/Documents && ./push.sh"
+alias minishell_leaks='valgrind --leak-check=full --track-fds=yes --show-leak-kinds=all --suppressions=.ignore_readline ./minishell'
+export PATH=$PATH:~/.local/bin
 
 ! pgrep RP42 > /dev/null && (nohup ~/Documents/RP42 2>&1 > /dev/null &) 2>&1 > /dev/null
+true
+export PATH=$HOME/.brew/bin:$PATH
