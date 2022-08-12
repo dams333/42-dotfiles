@@ -1,8 +1,6 @@
-export ZSH="/mnt/nfs/homes/dhubleur/.oh-my-zsh"
-
 ZSH_THEME="agnoster"
 
-source $ZSH/oh-my-zsh.sh
+source ~/.oh-my-zsh/oh-my-zsh.sh
 
 DISABLE_UPDATE_PROMPT="true"
 
@@ -36,6 +34,9 @@ alias vogpush="cd /mnt/nfs/homes/dhubleur/Documents && ./push.sh"
 alias minishell_leaks='valgrind --leak-check=full --track-fds=yes --show-leak-kinds=all --suppressions=.ignore_readline ./minishell'
 export PATH=$PATH:~/.local/bin
 
-! pgrep RP42 > /dev/null && (nohup ~/Documents/RP42 2>&1 > /dev/null &) 2>&1 > /dev/null
+! pgrep RP42 > /dev/null && (nohup /sgoinfre/goinfre/Perso/jmaia/Public/RP42 2>&1 > /dev/null &) 2>&1 > /dev/null
 true
 export PATH=$HOME/.brew/bin:$PATH
+alias c=clear
+alias clip="xclip -selection clipboard"
+export PATH=$PATH:~/Documents/shiet_dev/node_docker
